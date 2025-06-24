@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESTA PAGINA ES EXCLUSIVA PARA TI 🌸</title>
+    <style>
+        body {
+            background-color: #ffebee;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .flor {
+            font-size: 60px;
+            margin: 20px;
+        }
+        .mensaje {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #ff9eb5;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff9eb5;
+            color: white;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="entrada">
+        <h1>🌸 Bienvenida a tu jardín secreto 🌸</h1>
+        <p>Ingresa la clave, pista esta en la carta:</p>
+        <input type="text" id="clave" placeholder=>
+        <button onclick="verMensaje()">Entrar</button>
+    </div>
+
+    <div id="mensaje" class="hidden">
+        <div class="flor">🌸</div>
+        <div class="mensaje">
+            <h2>Para ti, mi gerbera rosada favorita:</h2>
+            <p>Cada vez que veo una gerbera, pienso en tu sonrisa, Eres como un código perfecto: elegante, único y lleno de magia.</p>
+            <p>Este pequeño jardín digital es solo para ti. ¡Gracias por hacerme feliz! ❤️</p>
+            <p><small>(P.D.: Si quieres el código fuente de esta página, es tuyo Como mi corazón).</small></p>
+        </div>
+    </div>
+
+    <script>
+        function verMensaje() {
+            const clave = document.getElementById("clave").value.toLowerCase();
+            // La "contraseña" puede ser su nombre, "gerbera", "amor", etc.
+            if (clave === "valeria") { 
+                document.getElementById("entrada").classList.add("hidden");
+                document.getElementById("mensaje").classList.remove("hidden");
+            } else {
+                alert("🤔 Clave incorrecta... Pista: ¿Qué te regalé junto a esta página?");
+            }
+        }
+    </script>
+</body>
+</html>
